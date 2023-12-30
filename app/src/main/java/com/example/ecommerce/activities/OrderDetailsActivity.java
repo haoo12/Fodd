@@ -68,8 +68,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
         ArrayList<OrderItem> orderItems = new ArrayList<>();
 
         // Replace this with your actual data
-        orderItems.add(new OrderItem("Croissant", 2, 20.00, "Processing"));
-        orderItems.add(new OrderItem("Trà đào", 1, 35.00, "Processing"));
+        orderItems.add(new OrderItem("Croissant", 1, 10.00, "Processing"));
 
         return orderItems;
     }
