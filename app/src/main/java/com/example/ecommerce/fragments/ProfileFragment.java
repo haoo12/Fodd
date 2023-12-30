@@ -4,10 +4,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
 import com.example.ecommerce.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -47,19 +50,34 @@ public class ProfileFragment extends Fragment {
         return fragment;
     }
 
+    private FirebaseAuth auth;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        auth = FirebaseAuth.getInstance();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        // Lấy thông tin người dùng từ Firebase Authentication
+        FirebaseUser currentUser = auth.getCurrentUser();
+        if (currentUser != null) {
+            // Ở đây bạn có thể lấy các thông tin khác nhau như displayName, email, uid, v.v.
+            String displayName = currentUser.getDisplayName();
+            String email = currentUser.getEmail();
+
+            // Hiển thị thông tin trong TextView
+            TextView displayNameTextView = view.findViewById(R.id.displayNameTextView);
+            TextView emailTextView = view.findViewById(R.id.emailTextView);
+
+            displayNameTextView.setText("Display Name: " + displayName);
+            emailTextView.setText("Email: " + email);
+        }
+
+        return view;
     }
 }
