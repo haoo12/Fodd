@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" >
+    <color name="black">#FF000000</color>
+
+    <color name="colorPrimary" tools:ignore="MissingDefaultResource">#008577</color>
+    <color name="purple_200" tools:ignore="MissingDefaultResource">#FFBB86FC</color>
+    <color name="purple_500" tools:ignore="MissingDefaultResource">#FF6200EE</color>
+    <color name="purple_700" tools:ignore="MissingDefaultResource">#FF3700B3</color>
+    <color name="teal_200" tools:ignore="MissingDefaultResource">#FF03DAC5</color>
+    <color name="teal_700" tools:ignore="MissingDefaultResource">#FF018786</color>
+
+    <color name="backgroundColor" tools:ignore="MissingDefaultResource">#FFFCFC</color>
+    <color name="textHeading" tools:ignore="MissingDefaultResource">#008eff</color>
+
+    <color name="colorPrimaryDark" tools:ignore="MissingDefaultResource">#00574B</color>
+    <color name="colorAccent" tools:ignore="MissingDefaultResource">#D81B60</color>
+    <color name="white" tools:ignore="MissingDefaultResource">#FFFFFF</color>
+    <color name="green" tools:ignore="MissingDefaultResource">#5FB709</color>
+    <color name="Red" tools:ignore="MissingDefaultResource">#EB0D0D</color>
+    <color name="blueish" tools:ignore="MissingDefaultResource">#17A2C0</color>
+    <color name="Black" tools:ignore="MissingDefaultResource">#000000</color>
+    <color name="Blacklogo" tools:ignore="MissingDefaultResource">#262626</color>
+    <color name="defaultColor" tools:ignore="MissingDefaultResource">#000000</color>
+    <color name="gray" tools:ignore="MissingDefaultResource">#7E000000</color>
+    <color name="darkgray" tools:ignore="MissingDefaultResource">#B2000000</color>
+    <color name="lightgray" tools:ignore="MissingDefaultResource">#1D000000</color>
+    <color name="darkgreen" tools:ignore="MissingDefaultResource">#026909</color>
+    <color name="OffWhite" tools:ignore="MissingDefaultResource">#36FFFFFF</color>
+    <color name="DarkBlue" tools:ignore="MissingDefaultResource">#250285</color>
+    <color name="pink" tools:ignore="MissingDefaultResource">#ff5ccb</color>
+    <color name="blue" tools:ignore="MissingDefaultResource">#03A9F4</color>
+    <color name="yourSelectedColor" tools:ignore="MissingDefaultResource">#17A2C0</color>
+</resources>

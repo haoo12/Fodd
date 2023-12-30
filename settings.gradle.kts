@@ -20,4 +20,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ECommerce"
 include(":app")
- 
+include(":admin_app")
