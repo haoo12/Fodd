@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ecommerce"
+    namespace = "com.example.admin_app"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.ecommerce"
-        minSdk = 27
+        applicationId = "com.example.admin_app"
+        minSdk = 29
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -31,22 +31,13 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     buildToolsVersion = "34.0.0"
-    ndkVersion = "26.1.10909125"
 }
-///
-allprojects {
-    repositories {
-
-    }
-}
-
 
 dependencies {
 
-
-    //implementation ("androidx.appcompat:appcompat:$appcompat_version")
-    // For loading and tinting drawables on older versions of the platform
-    //implementation ("androidx.appcompat:appcompat-resources:$appcompat_version")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
@@ -56,16 +47,28 @@ dependencies {
     implementation("com.google.firebase:firebase-database:20.3.0")
     implementation("com.google.firebase:firebase-analytics:21.5.0")
     implementation ("com.google.firebase:firebase-firestore:24.10.0")
+
+
+
     implementation("androidx.annotation:annotation-jvm:1.7.1")
     implementation("com.google.android.gms:play-services-tasks:18.0.2")
-    implementation("androidx.navigation:navigation-fragment:2.7.6")
-    implementation("androidx.navigation:navigation-ui:2.7.6")
-    testImplementation("junit:junit:4.13.2")
+    implementation("com.google.firebase:firebase-storage:20.3.0")
+    //implementation("com.google.firebase:firebase-database:20.3.0")
+    //implementation ("androidx.appcompat:appcompat:1.4.1")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("com.github.denzcoskun:ImageSlideshow:0.1.2")
     implementation ("com.github.bumptech.glide:glide:4.16.0")
-    implementation ("com.razorpay:checkout:1.6.36")
-    implementation ("com.squareup.picasso:picasso:2.71828")
-}
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
 
+    implementation ("com.github.yalantis:ucrop:2.2.6")
+    implementation("com.hbb20:ccp:2.7.3")
+    //implementation ("com.theartofdev.edmodo:android-image-cropper:${rootProject.extra["androidImageCropperVersion"]}")
+    implementation ("androidx.navigation:navigation-ui:2.7.6")
+    implementation ("androidx.lifecycle:lifecycle-extensions:2.2.0")
+    implementation ("androidx.legacy:legacy-support-v4:1.0.0")
+
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+}

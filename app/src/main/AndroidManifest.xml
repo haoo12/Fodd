@@ -71,13 +71,13 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <receiver
-            android:name="com.razorpay.RzpTokenReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.razorpay.INTENT_ACTION_PAYMENT_NOTIFICATION" />
-            </intent-filter>
-        </receiver>
+<!--        <receiver-->
+<!--            android:name="com.razorpay.RzpTokenReceiver"-->
+<!--            android:exported="false">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.razorpay.INTENT_ACTION_PAYMENT_NOTIFICATION" />-->
+<!--            </intent-filter>-->
+<!--        </receiver> -->
     </application>
 
 </manifest>
