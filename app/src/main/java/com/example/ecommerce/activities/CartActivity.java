@@ -1,3 +1,4 @@
+
 package com.example.ecommerce.activities;
 
 import android.content.BroadcastReceiver;
@@ -104,10 +105,11 @@ public class CartActivity extends AppCompatActivity {
         double subtotal = calculateSubtotal();
         double total = calculateTotal(subtotal);
 
-        // Chuyển sang PaymentActivity và truyền giá trị subtotal và total
+        String productName = cartModelList.get(0).getProductName();
         Intent intent = new Intent(this, PaymentActivity.class);
-        intent.putExtra("subtotal", subtotal);
-        intent.putExtra("total", total);
+        intent.putExtra("amount", overAllTotalAmount);  // Use the correct key "amount" instead of "subtotal"
+        intent.putExtra("total", overAllTotalAmount);
+        intent.putExtra("productName", productName);
         startActivity(intent);
     }
 

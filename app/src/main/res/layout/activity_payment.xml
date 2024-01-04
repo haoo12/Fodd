@@ -102,7 +102,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Quantity: 1"
+        android:text="Quantity:"
         android:textSize="16sp"
         android:textColor="#555555"
         app:layout_constraintStart_toStartOf="parent"

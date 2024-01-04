@@ -29,13 +29,15 @@ public class PaymentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_payment);
 
         // ...
-
+        String productName = getIntent().getStringExtra("productName");
         amount = getIntent().getDoubleExtra("amount", 0.0);
 
         subTotal = findViewById(R.id.sub_total);
         total = findViewById(R.id.total_amt);
         paymentBtn = findViewById(R.id.pay_btn);
 
+        TextView productNameTextView = findViewById(R.id.product_name);
+        productNameTextView.setText(productName);
         // Format amount to currency for sub_total
         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.US);
         String formattedSubTotal = currencyFormat.format(amount);
